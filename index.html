@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Units</title>
+    <style>
+      *, ::after, ::before {box-sizing: border-box;}
+      body {margin: 1em auto;background: #ececec;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";line-height: 1.5;font-size:18px;}
+      html, body, article, section, div, h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0;}
+      section {background: #fafafa;max-width: 150ch;margin: 1em auto; padding: 1em;border: 1px solid #e0e0e0;border-radius:4px;}
+      .steps {display: grid;grid-template-columns:1fr;grid-gap: 1rem 1rem;}
+      .step {background: #ececec;max-width: 75ch;padding: 1em;border: 1px solid #e0e0e0;border-radius:4px;position: relative;opacity:.8;cursor:pointer;}
+      div.step:hover {opacity: 1;}
+      .hero-content {max-width: 75ch;margin: 1em auto;padding: 0;border: none;}
+      code {background: #e0e0e0; padding: .2em .5em .2em .5em;}
+      h3 {margin-bottom: 0; padding-bottom: 0;font-size: 3rem;}
+      img {width: 100%; height: auto;}
+      @media screen and (min-width: 950px) {.steps{grid-template-columns:1fr 1fr 1fr;}}
+    </style>
+  </head>
+  <body>
+    <section class="hero-content">
+      <h3 style="text-align:center;">CSS Units</h3>
+    </section>
+    <section class="steps">
+      <div class="step">
+        <h3>%</h3>
+        <p>Relative to the value of the parent element. 100% width is the full width of the parent element. Not relative to the element itself!</p>
+      </div>
+      <div class="step">
+        <h3>em</h3>
+        <p>Relative to font-size of the parent element. If the value is <code>1.1em</code> that's the same as saying 110% of the parent's font size.</p>
+      </div>
+      <div class="step">
+        <h3>vh</h3>
+        <p>Units are a percept of the viewport's height. So <code>1vh</code> is equal to 1% of the window height, while 100vh is the full height of the window.</p>
+      </div>
+      <div class="step">
+        <h3>px</h3>
+        <p>Absolute size in pixels. It's important to know that CSS pixels are not physical, but merely references, so a 50x50 pixel box will be roughly the same size on a low-density screen as it is on a hight-density screen.</p>
+      </div>
+      <div class="step">
+        <h3>rem</h3>
+        <p>Relative to the font size of the root (i.e. <code>&lt;html&gt;</code>) element. So a size of 1.5rem is equal to 150% of the root font size.</p>
+      </div>
+      <div class="step">
+        <h3>vw</h3>
+        <p>Units are a percept of the viewport's width. So <code>1vw</code> is equal to 1% of the window width, while 100vw is the full width of the window.</p>
+      </div>
+    </section>
+  </body>
+</html>
